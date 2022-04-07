@@ -1,0 +1,106 @@
+body
+{
+    background-color:black;
+    margin: 0px;
+    font-family: 'Times New Roman';
+}
+
+.header
+{
+    height: 100px;
+    width: 100%;
+    border-bottom: 3px #32cd9f solid;
+    align-items: center;
+}
+
+.titulo
+{
+    color:#32cd9f;
+    margin: center;
+}
+
+.container
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+
+}
+
+.header .container
+{
+    height: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* COMEÇO DO BANNER*/
+
+.banner
+{
+    height: 80%;
+    background-image: url(./image/plano-de-fundo-preto28.webp);
+    background-size: cover;
+}
+
+.container .card1
+{
+    background-color:#ffffff3c;
+    height: 260px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: double black 10px;
+}
+
+.container .card2 
+{
+    background-color:#ffffff3c;
+    height: 260px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: double black 10px;
+}
+
+.container .card3
+{
+    background-color:#ffffff3c;
+    height: 260px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: double black 10px;
+}
+
+.container .card4
+{
+    background-color:#ffffff3c;
+    height: 260px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: double black 10px;
+}

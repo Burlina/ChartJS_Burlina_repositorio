@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="dash.css">
+
+</head>
+
+<body>
+
+    <!-- Inicio do HEADER-->
+
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Dashboards</h1>
+        </div>
+    </div>
+
+    <!-- Final do HEADER-->
+
+    <!-- Inicio do BANNER-->
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="card1">
+
+                <h4><b style="color:white">Linha</b></h4>
+
+                <div>
+                    <canvas id="myChart" style="background-color:rgba(0, 0, 0, 0.733); border-radius: 20px;"></canvas>
+                </div>
+            </div>
+
+            <div class="card2">
+
+                <h4><b style="color:white">Polar</b></h4>
+
+                <div>
+                    <canvas id="myChart2"
+                        style="background-color:rgba(0, 0, 0, 0.733); border-radius: 20px; width: 80%;"></canvas>
+                </div>
+            </div>
+
+            <div class="card3">
+
+                <h4><b style="color:white">Radar</b></h4>
+
+                <div>
+                    <canvas id="myChart3"
+                        style="background-color:rgba(0, 0, 0, 0.733); border-radius: 20px; width: 80%;"></canvas>
+                </div>
+            </div>
+
+            <div class="card4">
+
+                <h4><b style="color:white">Barra</b></h4>
+
+                <div>
+                    <canvas id="myChart4"
+                        style="background-color:rgba(0, 0, 0, 0.733); border-radius: 20px;"></canvas>
+                </div>
+
+            </div>
+            <br><br><br>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+<script>
+    const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgba(50, 205, 159)',
+            borderColor: 'rgba(0, 0, 0, 0.9)',
+            data: [30, 29, 28, 25, 22, 23],
+        },
+        
+        {
+            label: 'Umidade',
+            backgroundColor: 'rgba(24, 203, 248, 0.57)',
+            borderColor: 'rgba(0, 0, 0, 0.9)',
+            data: [80, 82, 80, 85, 80, 83],
+        }
+
+    ]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+
+    const config3 = {
+        type: 'radar',
+        data: data,
+        options: {}
+    };
+
+</script>
+
+<script>
+    const labels2 = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgba(50, 205, 159)',
+            borderColor: 'rgba(0, 0, 0, 0.9)',
+            data: [22, 24, 27, 23, 20, 18],
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'rgba(24, 203, 248, 0.57)',
+            borderColor: 'rgba(0, 0, 0, 0.9)',
+            data: [90, 89, 93, 87, 88, 82],
+        }
+
+    ]
+    };
+
+    const config2 = {
+        type: 'polarArea',
+        data: data2,
+        options: {}
+    };
+
+    const config4 = {
+        type: 'bar',
+        data: data2,
+        options:{}
+    };
+
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+
+    const myChart4 = new Chart(
+        document.getElementById('myChart4'),
+        config4
+    );
+
+</script>
+
+</html>
